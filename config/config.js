@@ -9,7 +9,7 @@ module.exports = {
   development: {
     rootPath: rootPath,
     db: process.env.MONGOLAB_URI,
-    port: process.env.PORT || 3000,
+    port: process.env.PORT || 4500,
     googleAuth: {
       clientID: process.env.clientID,
       clientSecret: process.env.clientSecret,
@@ -19,7 +19,7 @@ module.exports = {
   test: {
     rootPath: rootPath,
     db: process.env.MONGOLAB_URI,
-    port: process.env.PORT || 3000,
+    port: process.env.PORT || 4500,
     googleAuth: {
       clientID: process.env.clientID,
       clientSecret: process.env.clientSecret,
@@ -29,7 +29,7 @@ module.exports = {
   production: {
     rootPath: rootPath,
     db: process.env.MONGOLAB_URI,
-    port: process.env.PORT || 3000,
+    port: process.env.PORT || 4500,
     googleAuth: {
       clientID: process.env.clientID,
       clientSecret: process.env.clientSecret,
