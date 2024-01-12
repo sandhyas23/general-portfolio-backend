@@ -27,8 +27,8 @@ router.use(passport.session()); // Used to persist login sessions
 
 // Strategy config
 passport.use(new GoogleStrategy({
-        clientID: config.googleAuth.clientID,
-        clientSecret: config.googleAuth.clientSecret,
+        clientID: process.env.clientID,
+        clientSecret: process.env.clientSecret,
         callbackURL: process.env.callbackURL
     },
     (accessToken, refreshToken, profile, done) => {
