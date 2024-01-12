@@ -5,8 +5,8 @@ const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth2');
 const cookieSession = require('cookie-session');
 
-require('dotenv').config();
-
+const dotenv = require('dotenv');
+dotenv.config();
 
 const env = process.env.NODE_ENV || 'development';
 const config = require('../config/config')[env];
@@ -27,8 +27,8 @@ router.use(passport.session()); // Used to persist login sessions
 
 // Strategy config
 passport.use(new GoogleStrategy({
-        clientID: process.env.clientID,
-        clientSecret: process.env.clientSecret,
+        clientID: config.googleAuth.clientID,
+        clientSecret: config.googleAuth.clientSecret,
         callbackURL: process.env.callbackURL
     },
     (accessToken, refreshToken, profile, done) => {
