@@ -5,8 +5,8 @@ const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth2');
 const cookieSession = require('cookie-session');
 
-const dotenv = require('dotenv');
-dotenv.config();
+require('dotenv').config();
+
 
 const env = process.env.NODE_ENV || 'development';
 const config = require('../config/config')[env];
